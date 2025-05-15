@@ -1,0 +1,9 @@
+Projetos criados utilizando o Vite. Comandos:
+npm create vite@latest 
+
+Definir nome do projeto 
+Selecionar React >> Javascript
+
+executar comandos retornadod no terminal: 
+cd <nome_do_projeto> 
+npm install npm run dev
