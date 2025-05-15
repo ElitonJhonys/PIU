@@ -7,13 +7,13 @@ const EscopoReduz = () => {
         )
     }
 
-    function mudarCor(elemento) {
-        if (elemento.style.backgroundColor == "red") {
-          elemento.style.backgroundColor = "blue";
-        } else {
-          elemento.style.backgroundColor = "red";
-        }
-      }
+    function mudarCor() {
+        const cor = ["#FF6B6B", "#6BCB77", "#4D96FF", "#FFD93D", "#835AFD"];
+// função floor arredonda valor. random gere numero aleatório. randomColor irá selecionar de forma aleatória uma cor.
+            const randomColor = cor[Math.floor(Math.random() * cor.length)];
+            document.body.style.backgroundColor = randomColor;
+
+    }
 
     return(
         <>
@@ -25,7 +25,7 @@ const EscopoReduz = () => {
             <button onClick={handleClick}></button>
         </div>
         <div>
-            <div className="cont" onClick={"mudarCor(this)"}>Clique</div>
+            <div className="cont" onClick={mudarCor}>Clique</div>
         </div>
         </>
     )
