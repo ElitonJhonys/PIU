@@ -6,4 +6,5 @@ Selecionar React >> Javascript
 
 executar comandos retornadod no terminal: 
 cd <nome_do_projeto> 
-npm install npm run dev
+npm install 
+npm run dev
