@@ -8,3 +8,5 @@ executar comandos retornadod no terminal:
 cd <nome_do_projeto> 
 npm install 
 npm run dev
+
+http://localhost:5173/
