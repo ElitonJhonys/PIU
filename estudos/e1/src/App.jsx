@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { tasks as initialTasks } from "./data/tasks";
-import { Task } from "./components/Task";
-import { TaskList } from "./components/TaskList";
-import { ThemeToggle } from "./components/ThemeToggle";
+import { Task } from "./components/Task/Task";
+import { TaskList } from "./components/TaskList/TaskList";
+import { ThemeToggle } from "./components/ThemeToggle/ThemeToggle";
 
 export default function App() {
   const [tasks, setTasks] = useState(initialTasks);
