@@ -1,24 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../ThemeToggle/ThemeToggle.css"
 
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    // Aplica as classes ao body
-    if (isDark) {
-      document.body.classList.add('dark-theme');
-      document.body.classList.remove('light-theme');
-    } else {
-      document.body.classList.add('light-theme');
-      document.body.classList.remove('dark-theme');
-    }
-  }, [isDark]);
-
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    // Modifica o body DIRETAMENTE no clique (sem useEffect)
+    document.body.classList.toggle("dark-theme", !isDark);
+    setIsDark(!isDark); // Atualiza o estado
   };
-
   return (
     <button onClick={toggleTheme} className="theme-toggle">
       {isDark ? "☀️ Light Mode" : "🌙 Dark Mode"}
