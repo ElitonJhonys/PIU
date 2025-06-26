@@ -5,11 +5,21 @@ export default function FormSelect(){
 
     const [select, setSelect] = useState('')
     const[name,setName] = useState('')
+    const [listaselect, setListaSelect] = useState([])
+    const [listaname, setListaName] = useState([])
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setListaSelect([...listaselect, select])
+        setSelect('')
+        setListaName([...listaname, name])
+        setName('')
+    }
+        
     return(
         <div>
             <h1>ATV de 5 min</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>Form</h2>
                 <label>Selecione sua opção:
                     <select name="selecione" onChange={(e) => setSelect(e.target.value)}>
@@ -32,8 +42,8 @@ export default function FormSelect(){
                 
 
             </form>
-            <p>A selecao escolhida foi: {select}</p>
-            <p>O nome escolhido foi: {name}</p>
+             <p>A selecao escolhida foi: {listaselect.map((item) =><text>{item} </text>)}</p>
+             <p>A selecao escolhida foi: {listaname.map((item) =><text>{item} </text>)}</p>
 
         </div>
     )

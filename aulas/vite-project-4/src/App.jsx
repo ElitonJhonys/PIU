@@ -4,6 +4,7 @@ import FirstForm from './componentes/FirstForm'
 import FormState from './componentes/FormState'
 import FormSelect from './componentes/FormSelect'
 import Form from './componentes/Form'
+import ListaDeTarefas from './componentes/ListaDeTarefas'
 
 function App() {
  
@@ -19,6 +20,8 @@ function App() {
       <br />
       <hr />
         <Form/>
+      <hr />
+      <ListaDeTarefas />
   </div>
   )
 }
