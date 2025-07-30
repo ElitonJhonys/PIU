@@ -7,7 +7,7 @@ export default function Formulario(){
     const [usuarios, setUsuarios] = useState([])
 
     const handleSubmit = (e)=>{
-       
+        e.preventDefault();
         var usuario = {
             "email": email,
             "senha": senha
@@ -34,6 +34,7 @@ export default function Formulario(){
             <input type="submit" value="Enviar" />
             {email}
             {senha}
+        
             {usuarios}
         </form>
         </>
